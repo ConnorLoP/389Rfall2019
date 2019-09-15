@@ -44,10 +44,9 @@ Digital acknowledgement: Connor LoPresti
 
 ### Part 2 (75 pts)
 
-The file that I used to run the dictionary attack is in this directory called 'stub.py'. It is still in python and works with Python 3.X. A wordlist file is required for this program to run. I used rockyou.txt found in the standard kali wordlist libraries. This file needs to be moved to the same directory as 'stub.py'. 
+The file that I used to run the dictionary attack is in this directory called 'stub.py'. It is still in python and works with Python 3.X. A wordlist file is required for this program to run. I used rockyou.txt found in the standard kali wordlist libraries. This file needs to be moved to the same directory as 'stub.py'. I have not included rockyou.txt with the pushed writeup to save space since the wordlist is open knowledge. 
 
 To run just use: 
 >Python stup.py  
 
-Using this script, I was not able to find the login for the server. I ran into multiple issues with my script crashing due to failed socket recieves and other issues. This caused the search time to take a considerable amount of time. Especially since my computer is not the best.
-As shown in the comments, I used the usernames and approx. passwords found to narrow down my search space but the program still took too long. As I am submitting this, it has not finished running. If I had more time, I might be able to find it assuming my program doesnt stop or get a false positive while I'm away. Again. 
+Using this script, I was finally able to to the username and password (ejnorman84, hello1). I assumed that the password would be one of the aprox. passwords given on the pastebin since the usernames were also there. This however turned out not to be the case. I was able to find the password by running a full dictonary attack using rockyou.txt on all three given usernames. I was able to find the flag (CMSC389R-{!enough_nrg_4_a_str0ng_Pa$$wrd}) by looking through the server for a bit of time. It was in /home. I made sure to look though most of the dirs on the server. I had assumed that the most common place for a 'real' person to have information would be under home, media, srv, sys, tmp, and usr as these would normally contain info that a user would use.
