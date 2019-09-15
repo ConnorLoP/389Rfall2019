@@ -32,10 +32,10 @@ Digital acknowledgement: Connor LoPresti
 
 6. Also using nmap I was able to find 4 open ports. nmap had to be told to look through more ports inorder to find the larger one.
 	Open ports:
-		22 ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3
-		25 filtered smtp
-		80 http Apache httpd 2.4.29 (Ubuntu)
-		1337 waste? (Possible server) 
+		1. 22 ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3
+		2. 25 filtered smtp
+		3. 80 http Apache httpd 2.4.29 (Ubuntu)
+		4. 1337 waste? (Possible server) 
 
 7. As shown, the site which is located on port 80 is running Apache/2.4.29 (Ubuntu). I actully got this infromation sooner from mxtoolbox.com.
 
