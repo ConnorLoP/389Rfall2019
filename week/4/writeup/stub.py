@@ -12,7 +12,7 @@ def execute_cmd(cmd, curloc):
 	s.connect((host, port))
 
 	# Recieve ping request
-	s.recv(1024).decode("utf-8")
+	s.recv(4096).decode("utf-8")
 
 	req = ";cd " + curloc # Get to current directory location
 	req += ";" + cmd      # Pass in <Command>
@@ -24,7 +24,7 @@ def execute_cmd(cmd, curloc):
 
 	# Recieve any output
 	time.sleep(.1)
-	outraw = s.recv(1024).decode("utf-8")
+	outraw = s.recv(4096).decode("utf-8")
 	
 	# If no output, add a '\n' so that RegEx works.
 	# Some commands (cd ...) need to still be updated even though they dont return anything. 
@@ -41,13 +41,14 @@ def execute_cmd(cmd, curloc):
 
 if __name__ == '__main__':
 	curloc = "/"
-	print("\n\t\t||Shell into wattsamp.net:1337||")
+	print("\n\t\t||Shell into wattsamp.net:1337||\n")
+	time.sleep(1)
 
 	# Always runs. Can be stopped with 'quit'
 	# By design, you are already in the shell and can run any commands in addition to ones you would want to run on the server.
 	while True:
 		out = ""
-		inp = input(curloc+">")
+		inp = input(curloc+"> ")
 
 		# Help command
 		if inp == "help":
@@ -55,6 +56,7 @@ if __name__ == '__main__':
 			out += "<Command>                         :  Run <Command> in the Shell\n"
 			out += "pull <remote-path> <local-path>   :  Download files from Shell\n"
 			out += "help                              :  Shows this help menu\n"
+			out += "?                                 :  Shows help menu in Shell\n"
 			out += "quit                              :  Quit the shell\n"
 
 		# Quit command
@@ -88,6 +90,8 @@ if __name__ == '__main__':
 
 		# Anything else should be run on the server thought the Shell as a command.
 		else:
+			if inp == "?":
+				inp = "help"
 			(out, curloc) = execute_cmd(inp, curloc)
 
 		# Prints results from any commands given.
