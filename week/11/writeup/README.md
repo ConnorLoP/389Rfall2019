@@ -1,11 +1,11 @@
 # Writeup 1 - Web I
 
-Name: *PUT YOUR NAME HERE*
-Section: *PUT YOUR SECTION NUMBER HERE*
+Name: Connor LoPresti
+Section: 0101
 
 I pledge on my honor that I have not given or received any unauthorized assistance on this assignment or examination.
 
-Digital acknowledgement: *PUT YOUR NAME HERE*
+Digital acknowledgement: Connor LoPresti
 
 
 ## Assignment details
@@ -15,9 +15,9 @@ This assignment has two parts. It is due by 11/27/19 at 11:59PM.
 
 ### Part 1 (40 Pts)
 
-Such a Quick Little, website!
+CMSC389R-{h1dd3n_1n_plain_5ight} found on source for main page.
 
-[http://142.93.136.81:5000/](http://142.93.136.81:5000/)
+
 
 ### Part 2 (60 Pts)
 Complete all 6 levels of:
